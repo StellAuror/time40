@@ -1,0 +1,4 @@
+.section.sidebar .my-class {
+  overflow: visible;
+  z-index: 10;
+}

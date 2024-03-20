@@ -1,0 +1,13 @@
+name: thirsty
+title: thirsty
+username:
+account: mintdata
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9480726
+bundleId: 7476444
+url: https://mintdata.shinyapps.io/thirsty/
+when: 1689800851.99691
+lastSyncTime: 1689800851.99692
+asMultiple: FALSE
+asStatic: FALSE

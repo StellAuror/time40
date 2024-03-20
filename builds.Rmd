@@ -1,0 +1,37 @@
+```{r}
+library(bs4Dash)
+library(shiny)
+library(shinyWidgets)
+library(htmltools)
+library(htmlwidgets)
+library(rvest)
+library(plotly)
+library(waiter)
+library(stringr)
+library(wordcloud2)
+library(tm)
+library(SnowballC)
+library(tesseract)
+library(magick)
+library(qdap)
+library(reader)
+
+```
+
+
+```{r}
+df <- read.csv("tea.csv") %>% mutate(Rating = paste0("Avg. Rate: ", as.character(round(Rating, 1))))
+df.h1 <- df %>% group_by(Category) %>% summarise(n = dplyr::n())
+df.h2 <- df %>% group_by(Category, Type) %>% summarise(n = dplyr::n()) 
+df.h3 <- df %>% group_by(Category, Type, Rating) %>% summarise(n = dplyr::n())
+
+plot_ly(
+  labels = c(df.h1$Category, df.h2$Type, df.h3$Rating),
+  parents = c(rep("", nrow(df.h1)), df.h2$Category, df.h3$Type),
+  values = c(df.h1$n, df.h2$n, df.h3$n),
+  type = 'sunburst',
+  branchvalues = 'total'
+)
+
+```
+
