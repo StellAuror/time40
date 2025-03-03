@@ -3,7 +3,7 @@ The repository contains the source code for a Shiny application. This applicatio
 ## Scrapping
 The application retrieves data from the [Five O'Clock](https://fiveoclock.eu) website. The algorithm is designed to avoid overloading their servers (sequential scraping). 
 
-<img src="https://github.com/StellAuror/time40/assets/100155329/d21ac325-7b24-4cfe-82f6-f640eb6cfabf" width="500" />
+![image](https://github.com/user-attachments/assets/5da1dfa2-a2b3-4acc-ac5f-b1c4ddea48aa)
 
 ## Data presentation
 The application consists of four visualizations. After exploring these visualizations, users should have all the necessary information to evaluate the store’s assortment, specific infusions, or coffee beans.
